@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Giffer</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container bg-dark">
+        <h3>Get Gif</h3>
+        <form method="post" action="/special">
+            <div class="form-group">
+                <input type="text" class="form-control" name="keyword" placeholder="Get Special Gif">
+            </div>
+            <input type="submit" class="btn btn-primary" value="Submit" formaction="/special">
+        </form>
+
+        <br>
+
+        <form method="get" action="/random">
+            <input type="submit" class="btn btn-secondary" name="randomgif" value="Random Gif">
+        </form>
+
+        <br>
+
+        {% if gif %}
+        <img src="{{ gif }}" alt="Gif">
+        {% endif %}
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
